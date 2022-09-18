@@ -4,7 +4,7 @@ using System.Globalization;
 using CsvHelper;
 using MathNet.Numerics.LinearAlgebra;
 
-using var streamReader = File.OpenText("C:/Users/igayk/Repos/BigData.Labs/BigData.Labs.Lab3/data.csv");
+using var streamReader = File.OpenText($"{Environment.CurrentDirectory}/data.csv");
 using var csvReader = new CsvReader(streamReader, CultureInfo.CurrentCulture);
 
 var data = csvReader.GetRecords<Data>().ToList();
