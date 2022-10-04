@@ -12,4 +12,9 @@
       <PackageReference Include="MathNet.Numerics" Version="5.0.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\BigData.Labs.Models\BigData.Labs.Models.csproj" />
+      <ProjectReference Include="..\BigData.Labs.Utils\BigData.Labs.Utils.csproj" />
+    </ItemGroup>
+
 </Project>
