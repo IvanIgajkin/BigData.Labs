@@ -55,9 +55,9 @@ if (data.Any())
 				var tmpRegressorList = regressors.Append(regressor).ToList();
 				var correlationLists = tmpRegressorList.Select(r => tmpRegressorList.Select(r.Correlliation));
 				var determinant = Matrix<double>.Build.DenseOfColumns(correlationLists).Determinant();
-				if (determinant > maxCoefficient)
+				if (Math.Pow(determinant, 2) > maxCoefficient)
 				{
-					maxCoefficient = determinant;
+					maxCoefficient = Math.Pow(determinant, 2);
 					nextRegressor = regressor;
 				}
 			}
@@ -92,8 +92,7 @@ static void ShowRegressModel(IEnumerable<FactorRegressModel> regressModel, IEnum
 	Console.WriteLine();
 	
 	valueList.ForEach(d => Console.WriteLine($@"
-{d.X1} | {d.X3} | {d.X4} | {d.X5} | {d.X6} | {d.X7} | {d.X8} | {d.X9} | {d.X10} | {d.Y} |
-"));
+{d.X1} | {d.X3} | {d.X4} | {d.X5} | {d.X6} | {d.X7} | {d.X8} | {d.X9} | {d.X10} | {d.Y} |"));
 	model.ForEach(m => Console.Write($"{m.Summary} |"));
 	Console.WriteLine();
 	
