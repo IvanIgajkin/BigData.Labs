@@ -75,7 +75,7 @@ public class FactorRegressModel
 		return new FactorRegressModel(values, FactorSymbol.Multiple);
 	}
 	
-	private FactorRegressModel(IEnumerable<double> values, FactorSymbol factor)
+	public FactorRegressModel(IEnumerable<double> values, FactorSymbol factor)
 	{
 		_values = values;
 		_values2 = _values.Select(value => Math.Pow(value, 2.0));
