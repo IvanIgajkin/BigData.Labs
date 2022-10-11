@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigData.Labs.Utils", "BigDa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigData.Labs.Lab6", "BigData.Labs.Lab6\BigData.Labs.Lab6.csproj", "{F9CE7122-97B9-44EF-8935-82ECDD31EED5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BigData.Labs.Lab7", "BigData.Labs.Lab7\BigData.Labs.Lab7.csproj", "{7F986076-1480-4F04-97B0-A7FFB3063B04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{F9CE7122-97B9-44EF-8935-82ECDD31EED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9CE7122-97B9-44EF-8935-82ECDD31EED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9CE7122-97B9-44EF-8935-82ECDD31EED5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F986076-1480-4F04-97B0-A7FFB3063B04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F986076-1480-4F04-97B0-A7FFB3063B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F986076-1480-4F04-97B0-A7FFB3063B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F986076-1480-4F04-97B0-A7FFB3063B04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
