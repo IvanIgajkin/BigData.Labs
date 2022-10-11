@@ -52,18 +52,13 @@ if (dataModel.Any())
 	var upLimitIdx = 0;
 	do
 	{
-		if (upLimitIdx == ownValues.Count())
+		if (upLimitIdx == 2)
 		{
 			break;
 		}
 
 		var disperssion = 
 			ownValues.Select((value, idx) => idx <= upLimitIdx ? value : 0.0).Sum() / ownValues.Sum();
-
-		if (disperssion > 0.9)
-		{
-			break;
-		}
 
 		upLimitIdx++;
 
@@ -81,7 +76,7 @@ if (dataModel.Any())
 	var dataAsMtrx = Matrix<double>.Build.DenseOfColumns(dataList);
 
 	var reducedMtrx = dataAsMtrx * mainVectorsAsMtrx;
-	Console.WriteLine(reducedMtrx);
+	UtilsMethods.SaveDataModel(reducedMtrx);
 }
 
 Console.ReadKey();

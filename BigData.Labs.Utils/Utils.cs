@@ -1,6 +1,7 @@
 ﻿using System.Globalization;
 using BigData.Labs.Models;
 using CsvHelper;
+using MathNet.Numerics.LinearAlgebra;
 
 namespace BigData.Labs.Utils;
 
@@ -40,5 +41,19 @@ public static class UtilsMethods
 		return Enumerable.Range(1, 10)
 			.Select(facNo => new FactorRegressModel(data, facNo))
 			.ToList();
+	}
+
+	public static void SaveDataModel(Matrix<double> matrix)
+	{
+		var dataAsString = string.Empty;
+		for (var row = 0; row < matrix.RowCount; row++)
+		{
+			for (var col = 0; col < 2; col++)
+			{
+				dataAsString += $"{matrix[row, col]}" + (col == 0 ? $";" : "\n");
+			}
+		}
+		
+		File.WriteAllText($"{Environment.CurrentDirectory}/out.csv", dataAsString);
 	}
 }
