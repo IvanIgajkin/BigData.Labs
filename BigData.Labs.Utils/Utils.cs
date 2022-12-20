@@ -56,4 +56,18 @@ public static class UtilsMethods
 		
 		File.WriteAllText($"{Environment.CurrentDirectory}/out.csv", dataAsString);
 	}
+	
+	public static void SaveDataModel(IEnumerable<IEnumerable<double>> data)
+	{
+		var dataAsString = string.Empty;
+		for (var row = 0; row < data.Count(); row++)
+		{
+			for (var col = 0; col < 2; col++)
+			{
+				dataAsString += $"{data.ElementAt(row).ElementAt(col)}" + (col == 0 ? $";" : "\n");
+			}
+		}
+		
+		File.WriteAllText($"{Environment.CurrentDirectory}/out.csv", dataAsString);
+	}
 }
